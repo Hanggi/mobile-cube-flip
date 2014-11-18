@@ -1,0 +1,14 @@
+* {margin:0;padding:0;box-sizing:border-box;}
+html,body {height:100%;overflow:hidden;}
+html {background-color:#1d1d1d;}
+#wrapper {-webkit-perspective:960px;position: relative;height:100%;}
+
+.page-one {height:100%;width:100%;border:3px solid #fff;position:absolute;padding:20px;z-index:100;display:none;}
+
+#focus {-webkit-transform: rotate3d(1, 0, 0, 0deg) translate3d(0, 0, 0);z-index:1000;}
+
+.p1 {background-color:rgba(255, 0, 255, 1);color:#fff}
+.p2 {background-color:rgba(0, 0, 255, 1);border:3px solid #ff0;color:#fff}
+.p3 {background-color:rgba(0, 255, 0, 1);}
+.p4 {background-color:rgba(250, 240, 250, 1);}
+.p5 {background-color:#bbb;color:#fff;}
