@@ -116,7 +116,10 @@
 		e.preventDefault();
 		$page.css('-webkit-transition', 'none');
 		var touchNow = e.targetTouches[0].pageY;
-		asinV = asinS - Math.asin((touchNow - radius)/Math.sqrt((touchNow - radius)*(touchNow - radius)+radius*radius));touchV = Math.sin(asinV) * radius;touchV = index <= 0 && touchV < 0 ? touchV/3 : touchV;touchV = index >= num-1 && touchV >0 ? touchV/3 : touchV;
+		asinV = asinS - Math.asin((touchNow - radius)/Math.sqrt((touchNow - radius)*(touchNow - radius)+radius*radius));
+		touchV = Math.sin(asinV) * radius;
+		touchV = index <= 0 && touchV < 0 ? touchV/3 : touchV;
+		touchV = index >= num-1 && touchV >0 ? touchV/3 : touchV;
 		
 		// 현재 이동중의 면의 위치 *******************************************************************
 		var h = touchV <= radius ? Math.sqrt(radius*radius-touchV*touchV) : 0;var absV = radius - h;var R = touchV <= radius ? 90*Math.asin(touchV/radius)/Math.PI*2 : 90;var y = Math.abs(touchV) <= radius ? -touchV : Math.abs(touchV)/touchV*radius;
