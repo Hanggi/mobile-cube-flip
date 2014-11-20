@@ -109,7 +109,7 @@
 		$focus = $('#focus');
 		timeStart = new Date() * 1;
 		touchS = e.targetTouches[0].pageY;asinS = Math.asin((touchS - radius)/Math.sqrt((touchS - radius)*(touchS - radius)+radius*radius));
-		
+		touchV = 0;
 	});
 	// 터치무브 사건
 	$(window).bind('touchmove', function (e) {
@@ -158,6 +158,7 @@
 	});
 	//터치 앤더 사건
 	$(window).bind('touchend', function (e) {
+		if (touchV == 0) return;
 		var timeEnd = new Date() * 1;
 		// 조작 속도로 사건 측정
 		if (timeEnd - timeStart > 500) {
